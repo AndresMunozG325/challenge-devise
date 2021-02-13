@@ -8,6 +8,11 @@ class StoriesController < ApplicationController
     @user_id = current_user
   end
 
+  def my_picstories
+    @stories = Story.all
+    @user_id = current_user
+  end
+
   # GET /stories/1
   # GET /stories/1.json
   def show
